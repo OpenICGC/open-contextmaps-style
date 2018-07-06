@@ -42,7 +42,7 @@
     "ortoICGC2003": {
       "type": "raster",
       "tiles": [
-        "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2003A/CAT3857/{z}/{x}/{y}.png"
+        "https://tilemaps.icgc.cat/mapfactory/wmts/orto5m2003A/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
       "minzoom": 7,
@@ -52,7 +52,7 @@
 "ortoICGC2005": {
       "type": "raster",
       "tiles": [
-        "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2005A/CAT3857/{z}/{x}/{y}.png"
+        "https://tilemaps.icgc.cat/mapfactory/wmts/orto5m2005A/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
       "minzoom": 7,
@@ -61,7 +61,7 @@
 "ortoICGC2007": {
       "type": "raster",
       "tiles": [
-        "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2007A/CAT3857/{z}/{x}/{y}.png"
+        "https://tilemaps.icgc.cat/mapfactory/wmts/orto5m2007A/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
       "minzoom": 7,
@@ -70,7 +70,7 @@
 "ortoICGC2008": {
       "type": "raster",
       "tiles": [
-        "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2008/CAT3857/{z}/{x}/{y}.png"
+        "https://tilemaps.icgc.cat/mapfactory/wmts/orto5m2008/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
       "minzoom": 7,
@@ -79,7 +79,7 @@
 "ortoICGC2009": {
       "type": "raster",
       "tiles": [
-        "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2009/CAT3857/{z}/{x}/{y}.png"
+        "https://tilemaps.icgc.cat/mapfactory/wmts/orto5m2009/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
       "minzoom": 7,
@@ -88,7 +88,7 @@
 "ortoICGC2010": {
       "type": "raster",
       "tiles": [
-        "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2010/CAT3857/{z}/{x}/{y}.png"
+        "https://tilemaps.icgc.cat/mapfactory/wmts/orto5m2010/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
       "minzoom": 7,
@@ -97,7 +97,7 @@
 "ortoICGC2011": {
       "type": "raster",
       "tiles": [
-        "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2011/CAT3857/{z}/{x}/{y}.png"
+        "https://tilemaps.icgc.cat/mapfactory/wmts/orto5m2011/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
       "minzoom": 7,
@@ -106,7 +106,7 @@
 "ortoICGC2012": {
       "type": "raster",
       "tiles": [
-        "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2012/CAT3857/{z}/{x}/{y}.png"
+        "https://tilemaps.icgc.cat/mapfactory/wmts/orto5m2012/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
       "minzoom": 7,
@@ -115,7 +115,7 @@
 "ortoICGC2013": {
       "type": "raster",
       "tiles": [
-        "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2013/CAT3857/{z}/{x}/{y}.png"
+        "https://tilemaps.icgc.cat/mapfactory/wmts/orto5m2013/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
       "minzoom": 7,
@@ -124,7 +124,7 @@
 "ortoICGC2014": {
       "type": "raster",
       "tiles": [
-        "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2014/CAT3857/{z}/{x}/{y}.png"
+        "https://tilemaps.icgc.cat/mapfactory/wmts/orto5m2014/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
       "minzoom": 7,
@@ -133,7 +133,7 @@
 "ortoICGC2015": {
       "type": "raster",
       "tiles": [
-        "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2015/CAT3857/{z}/{x}/{y}.png"
+        "https://tilemaps.icgc.cat/mapfactory/wmts/orto5m2015/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
       "minzoom": 7,
@@ -142,7 +142,7 @@
 "ortoICGC2016": {
       "type": "raster",
       "tiles": [
-        "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2016/CAT3857/{z}/{x}/{y}.png"
+        "https://tilemaps.icgc.cat/mapfactory/wmts/orto5m2016/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
       "minzoom": 7,
