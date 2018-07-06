@@ -69,6 +69,7 @@ var map = new mapboxgl.Map({
     "zoom": 15.89,
     "pitch": 60,
     "hash": true,
+    "maxzoom":16,
     "attributionControl": false
         }).addControl(new mapboxgl.AttributionControl({
             compact: true
@@ -77,7 +78,7 @@ var map = new mapboxgl.Map({
 map.on('load', function () {
 
     map.easeTo({
-                'pitch': 60
+                'pitch': 45
             });
    
 });
