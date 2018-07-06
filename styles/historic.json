@@ -29,22 +29,15 @@
       "maxzoom": 18,
       "attribution": "ESRI &copy; <a href='http://www.esri.com'>ESRI</a>"
     },
-    "ortoInstaMaps": {
-      "type": "raster",
-      "tiles": [
-        "https://tilemaps.icgc.cat/mapfactory/wmts/orto_8_12/CAT3857/{z}/{x}/{y}.png"
-      ],
-      "tileSize": 256,
-      "maxzoom": 12
-    },
+    
     "ortoICGC": {
       "type": "raster",
       "tiles": [
         "https://geoserveis.icgc.cat/icc_mapesmultibase/noutm/wmts/orto/GRID3857/{z}/{x}/{y}.jpeg"
       ],
       "tileSize": 256,
-      "minzoom": 12.1,
-      "maxzoom": 20
+      "minzoom": 7,
+      "maxzoom": 18
     },
     "ortoICGC2003": {
       "type": "raster",
@@ -52,8 +45,8 @@
         "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2003A/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
-      "minzoom": 12.1,
-      "maxzoom": 20
+      "minzoom": 7,
+      "maxzoom": 18
     },
 
 "ortoICGC2005": {
@@ -62,8 +55,8 @@
         "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2005A/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
-      "minzoom": 12.1,
-      "maxzoom": 20
+      "minzoom": 7,
+      "maxzoom": 18
     },
 "ortoICGC2007": {
       "type": "raster",
@@ -71,8 +64,8 @@
         "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2007A/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
-      "minzoom": 12.1,
-      "maxzoom": 20
+      "minzoom": 7,
+      "maxzoom": 18
     },
 "ortoICGC2008": {
       "type": "raster",
@@ -80,8 +73,8 @@
         "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2008/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
-      "minzoom": 12.1,
-      "maxzoom": 20
+      "minzoom": 7,
+      "maxzoom": 18
     },
 "ortoICGC2009": {
       "type": "raster",
@@ -89,8 +82,8 @@
         "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2009/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
-      "minzoom": 12.1,
-      "maxzoom": 20
+      "minzoom": 7,
+      "maxzoom": 18
     },
 "ortoICGC2010": {
       "type": "raster",
@@ -98,8 +91,8 @@
         "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2010/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
-      "minzoom": 12.1,
-      "maxzoom": 20
+      "minzoom": 7,
+      "maxzoom": 18
     },
 "ortoICGC2011": {
       "type": "raster",
@@ -107,8 +100,8 @@
         "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2011/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
-      "minzoom": 12.1,
-      "maxzoom": 20
+      "minzoom": 7,
+      "maxzoom": 18
     },
 "ortoICGC2012": {
       "type": "raster",
@@ -116,8 +109,8 @@
         "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2012/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
-      "minzoom": 12.1,
-      "maxzoom": 20
+      "minzoom": 7,
+      "maxzoom": 18
     },
 "ortoICGC2013": {
       "type": "raster",
@@ -125,8 +118,8 @@
         "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2013/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
-      "minzoom": 12.1,
-      "maxzoom": 20
+      "minzoom": 7,
+      "maxzoom": 18
     },
 "ortoICGC2014": {
       "type": "raster",
@@ -134,8 +127,8 @@
         "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2014/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
-      "minzoom": 12.1,
-      "maxzoom": 20
+      "minzoom": 7,
+      "maxzoom": 18
     },
 "ortoICGC2015": {
       "type": "raster",
@@ -143,8 +136,8 @@
         "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2015/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
-      "minzoom": 12.1,
-      "maxzoom": 20
+      "minzoom": 7,
+      "maxzoom": 18
     },
 "ortoICGC2016": {
       "type": "raster",
@@ -152,8 +145,8 @@
         "http://tilemaps.icgc.cat/mapfactory/wmts/orto5m2016/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
-      "minzoom": 12.1,
-      "maxzoom": 20
+      "minzoom": 7,
+      "maxzoom": 18
     },
 
     "openmaptiles": {
@@ -180,12 +173,22 @@
         "visibility": "visible"
       }
     },
-    
+  
+    {
+      "id": "ortoICGC",
+      "type": "raster",
+      "source": "ortoICGC",
+      "minzoom": 7,
+      "maxzoom": 19,
+      "layout": {
+        "visibility": "none"
+      }
+    },    
     {
       "id": "ortoICGC2003",
       "type": "raster",
       "source": "ortoICGC2003",
-      "minzoom": 12.1,
+      "minzoom": 7,
       "maxzoom": 19,
       "layout": {
         "visibility": "none"
@@ -195,7 +198,7 @@
       "id": "ortoICGC2005",
       "type": "raster",
       "source": "ortoICGC2005",
-      "minzoom": 12.1,
+      "minzoom": 7,
       "maxzoom": 19,
       "layout": {
         "visibility": "none"
@@ -205,7 +208,7 @@
       "id": "ortoICGC2007",
       "type": "raster",
       "source": "ortoICGC2007",
-      "minzoom": 12.1,
+      "minzoom": 7,
       "maxzoom": 19,
       "layout": {
         "visibility": "none"
@@ -215,7 +218,7 @@
       "id": "ortoICGC2008",
       "type": "raster",
       "source": "ortoICGC2008",
-      "minzoom": 12.1,
+      "minzoom": 7,
       "maxzoom": 19,
       "layout": {
         "visibility": "none"
@@ -225,7 +228,7 @@
       "id": "ortoICGC2009",
       "type": "raster",
       "source": "ortoICGC2009",
-      "minzoom": 12.1,
+      "minzoom": 7,
       "maxzoom": 19,
       "layout": {
         "visibility": "none"
@@ -235,7 +238,7 @@
       "id": "ortoICGC2010",
       "type": "raster",
       "source": "ortoICGC2010",
-      "minzoom": 12.1,
+      "minzoom": 7,
       "maxzoom": 19,
       "layout": {
         "visibility": "none"
@@ -245,7 +248,7 @@
       "id": "ortoICGC2011",
       "type": "raster",
       "source": "ortoICGC2011",
-      "minzoom": 12.1,
+      "minzoom": 7,
       "maxzoom": 19,
       "layout": {
         "visibility": "none"
@@ -255,7 +258,7 @@
       "id": "ortoICGC2012",
       "type": "raster",
       "source": "ortoICGC2012",
-      "minzoom": 12.1,
+      "minzoom": 7,
       "maxzoom": 19,
       "layout": {
         "visibility": "none"
@@ -265,7 +268,7 @@
       "id": "ortoICGC2013",
       "type": "raster",
       "source": "ortoICGC2013",
-      "minzoom": 12.1,
+      "minzoom": 7,
       "maxzoom": 19,
       "layout": {
         "visibility": "none"
@@ -275,7 +278,7 @@
       "id": "ortoICGC2014",
       "type": "raster",
       "source": "ortoICGC2014",
-      "minzoom": 12.1,
+      "minzoom": 7,
       "maxzoom": 19,
       "layout": {
         "visibility": "none"
@@ -285,7 +288,7 @@
       "id": "ortoICGC2015",
       "type": "raster",
       "source": "ortoICGC2015",
-      "minzoom": 12.1,
+      "minzoom": 7,
       "maxzoom": 19,
       "layout": {
         "visibility": "none"
@@ -295,22 +298,14 @@
       "id": "ortoICGC2016",
       "type": "raster",
       "source": "ortoICGC2016",
-      "minzoom": 12.1,
+      "minzoom": 7,
       "maxzoom": 19,
       "layout": {
         "visibility": "none"
       }
     },
 
-    {
-      "id": "ortoInstaMaps",
-      "type": "raster",
-      "source": "ortoInstaMaps",
-      "maxzoom": 12,
-      "layout": {
-        "visibility": "visible"
-      }
-    },
+   
     {
       "id": "park-outline",
       "type": "line",
