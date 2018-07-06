@@ -168,6 +168,7 @@
       "id": "ortoEsri",
       "type": "raster",
       "source": "ortoEsri",
+      "minzoom": 2,
       "maxzoom": 16,
       "layout": {
         "visibility": "visible"
@@ -175,13 +176,13 @@
     },
   
     {
-      "id": "ortoICGC",
+      "id": "ortoICGC2017",
       "type": "raster",
       "source": "ortoICGC",
       "minzoom": 7,
       "maxzoom": 19,
       "layout": {
-        "visibility": "none"
+        "visibility": "visible"
       }
     },    
     {
