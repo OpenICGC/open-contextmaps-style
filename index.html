@@ -67,7 +67,7 @@ var map = new mapboxgl.Map({
     "center": [2.949501, 42.023761],
     "container": "map",
     "zoom": 15.89,
-    "picth": 60,
+    "pitch": 60,
     "hash": true,
     "attributionControl": false
         }).addControl(new mapboxgl.AttributionControl({
@@ -97,7 +97,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
 
     var link = document.createElement('a');
     link.href = '#';
-    link.className = 'active';
+    link.className = '';
     link.textContent = id;
 
     link.onclick = function (e) {
