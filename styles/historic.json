@@ -176,7 +176,7 @@
     },
   
     {
-      "id": "ortoICGC2017",
+      "id": "ortoICGCActual",
       "type": "raster",
       "source": "ortoICGC",
       "minzoom": 7,
