@@ -62,6 +62,7 @@
 
 <script>
 mapboxgl.accessToken = '<your access token here>';
+var _DEFAULT_PROPERTI="CODI_ANY";
 var map = new mapboxgl.Map({
     "style": "https://raw.githubusercontent.com/OpenICGC/open-contextmaps-styles/master/styles/historic.json",
     "center": [2.949501, 42.023761],
@@ -80,8 +81,57 @@ map.on('load', function () {
     map.easeTo({
                 'pitch': 60
             });
+
+
+      map.addSource('incendis-cat', {
+      "attribution": "Font: <a href='https://agricultura.gencat.cat.cat/' target='_blank'>DARP</a>",
+      "type": "vector",
+      "center": [1.8457, 41.7262, 8],
+      "description": "Incendis Cat",
+      "format": "pbf",
+      "maxzoom": 16,
+      "minzoom": 6,
+      "tiles": ["https://tilemaps.icgc.cat/tileserver/tileserver.php/incendis_CAT_1986-2017_3857_v0/{z}/{x}/{y}.pbf"],
+      "vector_layers": [{
+        "id": "incendis_CAT_1986-2017_3857_ok"
+      }]
+    });   
+
+
+      map.addLayer({
+      'id': 'indencis',
+      'source': 'incendis-cat',
+      'source-layer': 'incendis_CAT_1986-2017_3857_ok',
+      'interactive': true,
+     
+      'type': 'fill',
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        'fill-opacity': .9,
+ 
+        "fill-color": "#ff0000",
+        
+      }
+      
+      
+    } );
    
 });
+
+/*
+"filter": [
+    "all",
+    [
+      "==",
+      "CODI_FINAL",
+      "2016430096"
+    ]
+  ],
+
+
+*/
 
 var toggleableLayerIds = [ 'ortoICGC2003',
  'ortoICGC2005',
@@ -106,7 +156,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
     link.className = '';
     link.textContent = id;
 
-    if(i === toggleableLayerIds.length-1){
+     if(i === toggleableLayerIds.length-1){
         link.className = 'active';
 
     }
@@ -125,7 +175,6 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
             this.className = 'active';
             map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
         }
-
     };
 
     var layers = document.getElementById('menu');
