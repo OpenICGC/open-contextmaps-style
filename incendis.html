@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8' />
     <title>Test Orto ICGC Layers</title>
@@ -7,181 +8,258 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
     <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
+
 <body>
 
-<style>
-    #menu {
-        background: #fff;
-        position: absolute;
-        z-index: 1;
-        top: 10px;
-        right: 10px;
-        border-radius: 3px;
-        width: 120px;
-        border: 1px solid rgba(0,0,0,0.4);
-        font-family: 'Open Sans', sans-serif;
-    }
+    <style>
+        #menu {
+            background: #fff;
+            position: absolute;
+            z-index: 1;
+            top: 10px;
+            right: 10px;
+            border-radius: 3px;
+            width: 120px;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            font-family: 'Open Sans', sans-serif;
+        }
 
-    #menu a {
-        font-size: 13px;
-        color: #404040;
-        display: block;
-        margin: 0;
-        padding: 0;
-        padding: 10px;
-        text-decoration: none;
-        border-bottom: 1px solid rgba(0,0,0,0.25);
-        text-align: center;
-    }
+        #menu a {
+            font-size: 13px;
+            color: #404040;
+            display: block;
+            margin: 0;
+            padding: 0;
+            padding: 10px;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
 
-    #menu a:last-child {
-        border: none;
-    }
+        #menu a:last-child {
+            border: none;
+        }
 
-    #menu a:hover {
-        background-color: #f8f8f8;
-        color: #404040;
-    }
+        #menu a:hover {
+            background-color: #f8f8f8;
+            color: #404040;
+        }
 
-    #menu a.active {
-        background-color: #3887be;
-        color: #ffffff;
-    }
+        #menu a.active {
+            background-color: #3887be;
+            color: #ffffff;
+        }
 
-    #menu a.active:hover {
-        background: #3074a4;
-    }
-</style>
+        #menu a.active:hover {
+            background: #3074a4;
+        }
+    </style>
 
-<nav id="menu"></nav>
-<div id="map"></div>
+    <nav id="menu"></nav>
+    <div id="map"></div>
 
-<script>
-mapboxgl.accessToken = '<your access token here>';
-var _DEFAULT_PROPERTI="CODI_ANY";
-var map = new mapboxgl.Map({
-    "style": "https://raw.githubusercontent.com/OpenICGC/open-contextmaps-styles/master/styles/historic.json",
-    "center": [2.949501, 42.023761],
-    "container": "map",
-    "zoom": 15.89,
-    "pitch": 60,
-    "hash": true,
-    "maxZoom":18.90,
-    "attributionControl": false
+    <script>
+        /*
+
+        {"vector_layers":[{"id":"incendis_CAT_1986-2017_2222_4326_area_fix_disolt_ok","description":"Incendis_1986_2017_poligons","fields":{"GRID_CODE":"Number","DATA_INCEN":"String","CODI_FINAL":"String","MUNICIPI":"String","XMIN":"Number","XMAX":"Number","YMIN":"Number","YMAX":"Number","AREA":"Number","ANY":"Number"}},{"id":"incendis_CAT_1986-2017_2222_4326_centroids_ok","description":"incendis_1986_2017_centroids","fields":{"GRID_CODE":"Number","DATA_INCEN":"String","CODI_FINAL":"String","MUNICIPI":"String","XMIN":"Number","XMAX":"Number","YMIN":"Number","YMAX":"Number","AREA":"Number","ANY":"Number"}}]}
+
+
+        */
+
+
+        mapboxgl.accessToken = '<your access token here>';
+        var _DEFAULT_PROPERTI = "CODI_ANY";
+        var map = new mapboxgl.Map({
+            "style": "https://raw.githubusercontent.com/OpenICGC/open-contextmaps-styles/master/styles/historic.json",
+            "center": [2.949501, 42.023761],
+            "container": "map",
+            "zoom": 15.89,
+            "pitch": 60,
+            "hash": true,
+            "maxZoom": 18.90,
+            "attributionControl": false
         }).addControl(new mapboxgl.AttributionControl({
             compact: true
         }));
 
-map.on('load', function () {
+        map.on('load', function () {
 
-    map.easeTo({
+            map.easeTo({
                 'pitch': 60
             });
 
 
-      map.addSource('incendis-cat', {
-      "attribution": "Font: <a href='https://agricultura.gencat.cat.cat/' target='_blank'>DARP</a>",
-      "type": "vector",
-      "center": [1.8457, 41.7262, 8],
-      "description": "Incendis Cat",
-      "format": "pbf",
-      "maxzoom": 16,
-      "minzoom": 6,
-      "tiles": ["https://tilemaps.icgc.cat/tileserver/tileserver.php/incendis_CAT_1986-2017_3857_v0/{z}/{x}/{y}.pbf"],
-      "vector_layers": [{
-        "id": "incendis_CAT_1986-2017_3857_ok"
-      }]
-    });   
+            map.addSource('incendis-cat', {
+                "attribution": "Font: <a href='https://agricultura.gencat.cat.cat/' target='_blank'>DARP</a>",
+                "type": "vector",
+                "center": [1.8457, 41.7262, 8],
+                "description": "Incendis Cat",
+                "format": "pbf",
+                "maxzoom": 16,
+                "minzoom": 6,
+                "tiles": [
+                    "https://tilemaps.icgc.cat/tileserver/tileserver.php/Incendis_1986_2017/{z}/{x}/{y}.pbf"
+                ],
+                "vector_layers": [{
+                        "id": "incendis_CAT_1986-2017_2222_4326_area_fix_disolt_ok"
+                    },
+                    {
+                        "id": "incendis_CAT_1986-2017_2222_4326_centroids_ok"
+                    }
+                ]
+            });
 
 
-      map.addLayer({
-      'id': 'indencis',
-      'source': 'incendis-cat',
-      'source-layer': 'incendis_CAT_1986-2017_3857_ok',
-      'interactive': true,
-     
-      'type': 'fill',
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        'fill-opacity': .9,
- 
-        "fill-color": "#ff0000",
-        
-      }
-      
-      
-    } );
-   
-});
+            map.addLayer({
+                'id': 'indencis',
+                'source': 'incendis-cat',
+                'source-layer': 'incendis_CAT_1986-2017_2222_4326_area_fix_disolt_ok',
+                'interactive': true,
 
-/*
-"filter": [
-    "all",
-    [
-      "==",
-      "CODI_FINAL",
-      "2016430096"
-    ]
-  ],
+                'type': 'fill',
+                "layout": {
+                    "visibility": "visible"
+                },
+                "paint": {
+                    'fill-opacity': .5,
+
+                    "fill-color": "#ff0000",
+
+                }
 
 
-*/
+            });
 
-var toggleableLayerIds = [ 'ortoICGC2003',
- 'ortoICGC2005',
- 'ortoICGC2007',
- 'ortoICGC2008',
- 'ortoICGC2009',
- 'ortoICGC2010',
- 'ortoICGC2011',
- 'ortoICGC2012',
- 'ortoICGC2013',
- 'ortoICGC2014',
- 'ortoICGC2015',
- 'ortoICGC2016',
- 'ortoICGCActual',
-  ];
 
-for (var i = 0; i < toggleableLayerIds.length; i++) {
-    var id = toggleableLayerIds[i];
+            map.addLayer({
+                'id': 'indencis-point',
+                'source': 'incendis-cat',
+                'source-layer': 'incendis_CAT_1986-2017_2222_4326_centroids_ok',
+                'interactive': true,
 
-    var link = document.createElement('a');
-    link.href = '#';
-    link.className = '';
-    link.textContent = id;
+                'type': 'circle',
+                "layout": {
+                    "visibility": "visible"
+                },
+                "paint": {
+                    'circle-opacity': .9,
+                    "circle-radius": 10,
+                    "circle-color": "#00FF00",
 
-     if(i === toggleableLayerIds.length-1){
-        link.className = 'active';
+                }
 
-    }
 
-    link.onclick = function (e) {
-        var clickedLayer = this.textContent;
-        e.preventDefault();
-        e.stopPropagation();
+            });
 
-        var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
 
-        if (visibility === 'visible') {
-            map.setLayoutProperty(clickedLayer, 'visibility', 'none');
-            this.className = '';
-        } else {
-            this.className = 'active';
-            map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+
+            map.addLayer({
+                "id": "incendis-line",
+                "type": "line",
+                'source': 'incendis-cat',
+                "source-layer": "incendis_CAT_1986-2017_2222_4326_area_fix_disolt_ok",
+                "paint": {
+                    "line-opacity": 1,
+                    "line-color": "rgba(247, 57, 8, 1)",
+                    "line-width": 8,
+                    "line-blur": 0.5,
+                    "line-dasharray": [
+                        3
+                    ]
+                },
+                "layout": {
+                    "line-cap": "round",
+                    "line-join": "round"
+                },
+                "filter": [
+                    "any", [
+                        "==",
+                        "CODI_FINAL",
+                        "2016430096"
+                    ]
+                ]
+            });
+
+
+
+            map.on("click", 'indencis', function (e) {
+
+                map.getCanvas().style.cursor = 'pointer';
+                var feature = e.features[0];
+                console.info(feature);
+
+            });
+
+        });
+
+        /*
+
+
+
+        */
+
+        var toggleableLayerIds = ['ortoICGC2003',
+            'ortoICGC2005',
+            'ortoICGC2007',
+            'ortoICGC2008',
+            'ortoICGC2009',
+            'ortoICGC2010',
+            'ortoICGC2011',
+            'ortoICGC2012',
+            'ortoICGC2013',
+            'ortoICGC2014',
+            'ortoICGC2015',
+            'ortoICGC2016',
+            'ortoICGCActual',
+        ];
+
+        for (var i = 0; i < toggleableLayerIds.length; i++) {
+            var id = toggleableLayerIds[i];
+
+            var link = document.createElement('a');
+            link.href = '#';
+            link.className = '';
+            link.textContent = id;
+
+            if (i === toggleableLayerIds.length - 1) {
+                link.className = 'active';
+
+            }
+
+            link.onclick = function (e) {
+                var clickedLayer = this.textContent;
+                e.preventDefault();
+                e.stopPropagation();
+
+                var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+
+                if (visibility === 'visible') {
+                    map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+                    this.className = '';
+                } else {
+                    this.className = 'active';
+                    map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+                }
+            };
+
+            var layers = document.getElementById('menu');
+            layers.appendChild(link);
         }
-    };
-
-    var layers = document.getElementById('menu');
-    layers.appendChild(link);
-}
-
-</script>
+    </script>
 
 </body>
+
 </html>
