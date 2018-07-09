@@ -33,7 +33,7 @@
     "ortoICGC": {
       "type": "raster",
       "tiles": [
-        "https://geoserveis.icgc.cat/icc_mapesmultibase/noutm/wmts/orto/GRID3857/{z}/{x}/{y}.jpeg"
+        "https://tilemaps.icgc.cat/mapfactory/wmts/orto5actual/CAT3857/{z}/{x}/{y}.png"
       ],
       "tileSize": 256,
       "minzoom": 7,
