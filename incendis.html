@@ -74,7 +74,7 @@
     <script>
         /*
 
-                {"vector_layers":[{"id":"incendis_CAT_1986-2017_2222_4326_area_fix_disolt_ok","description":"Incendis_1986_2017_poligons","fields":{"GRID_CODE":"Number","DATA_INCEN":"String","CODI_FINAL":"String","MUNICIPI":"String","XMIN":"Number","XMAX":"Number","YMIN":"Number","YMAX":"Number","AREA":"Number","ANY":"Number"}},{"id":"incendis_CAT_1986-2017_2222_4326_centroids_ok","description":"incendis_1986_2017_centroids","fields":{"GRID_CODE":"Number","DATA_INCEN":"String","CODI_FINAL":"String","MUNICIPI":"String","XMIN":"Number","XMAX":"Number","YMIN":"Number","YMAX":"Number","AREA":"Number","ANY":"Number"}}]}
+                {"vector_layers":[{"id":"incendis_4326_poligons_ok","description":"Incendis_1986_2017_poligons","fields":{"GRID_CODE":"Number","DATA_INCEN":"String","CODI_FINAL":"String","MUNICIPI":"String","XMIN":"Number","XMAX":"Number","YMIN":"Number","YMAX":"Number","AREA":"Number","ANY":"Number"}},{"id":"incendis_4326_centroides_ok","description":"incendis_1986_2017_centroids","fields":{"GRID_CODE":"Number","DATA_INCEN":"String","CODI_FINAL":"String","MUNICIPI":"String","XMIN":"Number","XMAX":"Number","YMIN":"Number","YMAX":"Number","AREA":"Number","ANY":"Number"}}]}
 
 
                 */
@@ -114,10 +114,10 @@
                     "https://tilemaps.icgc.cat/tileserver/tileserver.php/Incendis_1986_2017/{z}/{x}/{y}.pbf"
                 ],
                 "vector_layers": [{
-                        "id": "incendis_CAT_1986-2017_2222_4326_area_fix_disolt_ok"
+                        "id": "incendis_4326_poligons_ok"
                     },
                     {
-                        "id": "incendis_CAT_1986-2017_2222_4326_centroids_ok"
+                        "id": "incendis_4326_centroides_ok"
                     }
                 ]
             });
@@ -126,7 +126,7 @@
             map.addLayer({
                 'id': 'indencis',
                 'source': 'incendis-cat',
-                'source-layer': 'incendis_CAT_1986-2017_2222_4326_area_fix_disolt_ok',
+                'source-layer': 'incendis_4326_poligons_ok',
                 'interactive': true,
 
                 'type': 'fill',
@@ -147,7 +147,7 @@
             map.addLayer({
                 'id': 'indencis-point',
                 'source': 'incendis-cat',
-                'source-layer': 'incendis_CAT_1986-2017_2222_4326_centroids_ok',
+                'source-layer': 'incendis_4326_centroides_ok',
                 'interactive': true,
 
                 'type': 'circle',
@@ -170,7 +170,7 @@
                 "id": "incendis-line",
                 "type": "line",
                 'source': 'incendis-cat',
-                "source-layer": "incendis_CAT_1986-2017_2222_4326_area_fix_disolt_ok",
+                "source-layer": "incendis_4326_poligons_ok",
                 "paint": {
                     "line-opacity": 1,
                     "line-color": "rgba(247, 57, 8, 1)",
